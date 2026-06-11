@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms & Conditions — Business Hub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg:        #0f1117;
+      --surface:   #181c26;
+      --border:    #252b3b;
+      --accent:    #f5c842;
+      --accent2:   #3be08b;
+      --text:      #e8eaf0;
+      --muted:     #7a8099;
+      --heading:   #ffffff;
+      --pill-bg:   rgba(245,200,66,0.10);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      line-height: 1.75;
+      min-height: 100vh;
+    }
+
+    /* ── TOP NAV ── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(15,17,23,0.92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(1.5rem, 5vw, 3rem);
+      height: 60px;
+    }
+    .logo {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--heading);
+      text-decoration: none;
+    }
+    .logo span { color: var(--accent); }
+    .nav-badge {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 3px 9px;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      padding: clamp(3rem, 8vw, 5.5rem) clamp(1.5rem, 5vw, 3rem) 2.5rem;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--pill-bg);
+      border: 1px solid rgba(245,200,66,0.25);
+      color: var(--accent);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border-radius: 100px;
+      padding: 5px 14px;
+      margin-bottom: 1.5rem;
+    }
+    .hero-eyebrow::before {
+      content: '';
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      display: block;
+    }
+    h1 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 800;
+      color: var(--heading);
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      margin-bottom: 1rem;
+    }
+    h1 em {
+      font-style: normal;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-meta {
+      display: flex; gap: 1.5rem; flex-wrap: wrap;
+      align-items: center;
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 1rem;
+    }
+    .hero-meta span { display: flex; align-items: center; gap: 5px; }
+    .hero-meta svg { width: 13px; height: 13px; flex-shrink: 0; }
+
+    /* ── LAYOUT ── */
+    .page-wrap {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 clamp(1.5rem, 5vw, 3rem) 5rem;
+    }
+
+    /* ── DIVIDER ── */
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, var(--accent) 0%, transparent 60%);
+      margin-bottom: 2.5rem;
+      opacity: 0.35;
+    }
+
+    /* ── INTRO BOX ── */
+    .intro-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      border-radius: 10px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 2.5rem;
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+    .intro-box strong { color: var(--text); }
+
+    /* ── SECTION ── */
+    .section {
+      margin-bottom: 2rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .section-header {
+      display: flex; align-items: center; gap: 1rem;
+      padding: 1.1rem 1.5rem;
+      border-bottom: 1px solid var(--border);
+      cursor: pointer;
+      user-select: none;
+    }
+    .section-header:hover { background: rgba(255,255,255,0.02); }
+    .section-num {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--accent);
+      background: var(--pill-bg);
+      border: 1px solid rgba(245,200,66,0.2);
+      border-radius: 5px;
+      padding: 2px 8px;
+      letter-spacing: 0.08em;
+      flex-shrink: 0;
+    }
+    .section-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--heading);
+      flex: 1;
+    }
+    .chevron {
+      width: 18px; height: 18px;
+      color: var(--muted);
+      transition: transform 0.25s ease;
+      flex-shrink: 0;
+    }
+    .section.open .chevron { transform: rotate(180deg); }
+
+    .section-body {
+      display: none;
+      padding: 1.25rem 1.5rem 1.4rem;
+    }
+    .section.open .section-body { display: block; }
+
+    .section-body p {
+      color: var(--text);
+      font-size: 0.875rem;
+      margin-bottom: 0.6rem;
+    }
+    .section-body p:last-child { margin-bottom: 0; }
+    .section-body ul, .section-body ol {
+      padding-left: 1.25rem;
+      margin-top: 0.5rem;
+    }
+    .section-body li {
+      font-size: 0.875rem;
+      color: var(--text);
+      margin-bottom: 0.4rem;
+    }
+    .section-body li:last-child { margin-bottom: 0; }
+
+    /* highlight items */
+    .highlight-item {
+      display: flex; gap: 0.75rem; align-items: flex-start;
+      margin-bottom: 0.55rem;
+    }
+    .highlight-item::before {
+      content: '';
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--accent2);
+      margin-top: 0.52em;
+      flex-shrink: 0;
+    }
+
+    /* ── IMPORTANT CALLOUT ── */
+    .callout {
+      background: rgba(59,224,139,0.06);
+      border: 1px solid rgba(59,224,139,0.2);
+      border-radius: 8px;
+      padding: 0.9rem 1.1rem;
+      font-size: 0.82rem;
+      color: var(--accent2);
+      margin-top: 0.9rem;
+      display: flex; gap: 0.6rem; align-items: flex-start;
+    }
+    .callout svg { width: 15px; height: 15px; flex-shrink: 0; margin-top: 1px; }
+
+    .callout-warn {
+      background: rgba(245,200,66,0.06);
+      border-color: rgba(245,200,66,0.2);
+      color: var(--accent);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem clamp(1.5rem, 5vw, 3rem);
+      text-align: center;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+    footer a { color: var(--accent); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    /* ── BACK TO TOP ── */
+    .back-top {
+      display: inline-flex; align-items: center; gap: 6px;
+      color: var(--accent);
+      font-size: 0.8rem; font-weight: 600;
+      text-decoration: none;
+      border: 1px solid rgba(245,200,66,0.25);
+      border-radius: 6px;
+      padding: 6px 14px;
+      margin-bottom: 1.5rem;
+      transition: background 0.15s;
+    }
+    .back-top:hover { background: var(--pill-bg); }
+
+    /* ── MOBILE ── */
+    @media (max-width: 520px) {
+      .section-header { padding: 1rem 1.1rem; }
+      .section-body { padding: 1rem 1.1rem 1.2rem; }
+      h1 { font-size: 1.7rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a class="logo" href="#">Business<span>Hub</span></a>
+    <span class="nav-badge">Legal</span>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-eyebrow">Terms &amp; Conditions</div>
+    <h1>Our agreement<br/>with <em>you</em></h1>
+    <div class="hero-meta">
+      <span>
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="12" height="11" rx="1.5"/><path d="M5 3V1.5M11 3V1.5M2 7h12"/></svg>
+        Last updated: March 15, 2026
+      </span>
+      <span>
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="6"/><path d="M8 5v3.5l2.5 1.5"/></svg>
+        ~5 min read
+      </span>
+    </div>
+  </header>
+
+  <!-- BODY -->
+  <main class="page-wrap">
+    <div class="divider"></div>
+
+    <div class="intro-box">
+      <strong>Welcome to Business Hub.</strong> By registering, accessing, or using our services, you agree to comply with and be bound by the following Terms and Conditions. If you do not agree with any part of these terms, please do not use the platform.
+    </div>
+
+    <!-- 1 -->
+    <div class="section open">
+      <div class="section-header" onclick="toggleSection(this)">
+        <span class="section-num">01</span>
+        <span class="section-title">Acceptance of Terms</span>
+        <svg class="chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 7.5l5 5 5-5"/></svg>
+      </div>
+      <div class="section-body">
+        <p>By creating an account and using our services, you confirm that you have read, understood, and agreed to these Terms and Conditions. If you do not agree with any part of these terms, you should not use the platform.</p>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="section">
+      <div class="section-header" onclick="toggleSection(this)">
+        <span class="section-num">02</span>
+        <span class="section-title">Eligibility</span>
+        <svg class="chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 7.5l5 5 5-5"/></svg>
+      </div>
+      <div class="section-body">
+        <div class="highlight-item">Users must be at least 18 years of age or have the legal capacity to enter into binding agreements in their jurisdiction.</div>
+        <div class="highlight-item">All information provided during registration must be accurate, complete, and up to date.</div>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="section">
+      <div class="section-header" onclick="toggleSection(this)">
+        <span class="section-num">03</span>
+        <span class="section-title">Account Registration</span>
+        <svg class="chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 7.5l5 5 5-5"/></svg>
+      </div>
+      <div class="section-body">
+        <div class="highlight-item">Users are responsible for maintaining the confidentiality of their account credentials.</div>
+        <div class="highlight-item">The name, email address, phone number, identification details, and any other information provided must belong to the account holder.</div>
+        <div class="highlight-item">Providing false, misleading, or fraudulent information may result in suspension or termination of the account.</div>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="section">
+      <div class="section-header" onclick="toggleSection(this)">
+        <span class="section-num">04</span>
+        <span class="section-title">Task Participation</span>
+        <svg class="chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 7.5l5 5 5-5"/></svg>
+      </div>
+      <div class="section-body">
+        <div class="highlight-item">Registered users may be allocated tasks based on the platform's operational requirements.</div>
+        <div class="highlight-item">Tasks must be completed according to the instructions provided.</div>
+        <div class="highlight-item">Failure to complete assigned tasks within the required timelines may lead to delayed allocations, account review, or temporary account restrictions.</div>
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="section">
+      <div class="section-header" onclick="toggleSection(this)">
+        <span class="section-num">05</span>
+        <span class="section-title">Earnings and Payments</span>
+        <svg class="chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 7.5l5 5 5-5"/></svg>
+      </div>
+      <div class="section-body">
+        <div class="highlight-item">Earnings are credited to a user's account after successful completion and verification of tasks.</div>
+        <div class="highlight-item">Payment timelines may vary depending on the verification process.</div>
+        <div class="highlight-item">Users may only withdraw funds through the withdrawal procedures provided on the platform.</div>
+      </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="section">
+      <div class="section-header" onclick="toggleSection(this)">
+        <span class="section-num">06</span>
+        <span class="section-title">Withdrawal Requirements</span>
+        <svg class="chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 7.5l5 5 5-5"/></svg>
+      </div>
+      <div class="section-body">
+        <div class="highlight-item">Withdrawal requests must be submitted using the user's own registered credentials.</div>
+        <div class="highlight-item">Details provided for withdrawal — including names, account numbers, mobile money numbers, and identification numbers — must match information registered on the platform.</div>
+        <div class="highlight-item">Any discrepancies may result in delayed processing or rejection of the withdrawal request pending further verification.</div>
+        <div class="callout callout-warn">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 2.5L1.5 13.5h13L8 2.5z"/><path d="M8 7v3M8 11.5v.5"/></svg>
+          All withdrawal details must exactly match your registered account information.
+        </div>
+      </div>
+    </div>
+
+    <!-- 7 -->
+    <div class="section">
+      <div class="section-header" onclick="toggleSection(this)">
+        <span class="section-num">07</span>
+        <span class="section-title">Fees</span>
+        <svg class="chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 7.5l5 5 5-5"/></svg>
+      </div>
+      <div class="section-body">
+        <div class="highlight-item">Certain services may attract administrative, processing, activation, premium, or withdrawal fees.</div>
+        <div class="highlight-item">Any applicable fees will be clearly communicated before you proceed with the relevant transaction.</div>
+        <div class="highlight-item">Fees paid for services already rendered may not be refundable unless otherwise required by law.</div>
+      </div>
+    </div>
+
+    <!-- 8 -->
+    <div class="section">
+      <div class="section-header" onclick="toggleSection(this)">
+        <span class="section-num">08</span>
+        <span class="section-title">Prohibited Activities</span>
+        <svg class="chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 7.5l5 5 5-5"/></svg>
+      </div>
+      <div class="section-body">
+        <p>Users shall not:</p>
+        <ul>
+          <li>Engage in fraud, identity theft, or impersonation.</li>
+          <li>Use another person's credentials or payment details.</li>
+          <li>Attempt to manipulate, interfere with, or compromise the platform's systems.</li>
+          <li>Submit false information during registration or withdrawal.</li>
+          <li>Use the platform for any unlawful purpose.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 9 -->
+    <div class="section">
+      <div class="section-header" onclick="toggleSection(this)">
+        <span class="section-num">09</span>
+        <span class="section-title">Verification and Compliance</span>
+        <svg class="chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 7.5l5 5 5-5"/></svg>
+      </div>
+      <div class="section-body">
+        <p>The platform reserves the right to request additional documentation or information to verify a user's identity and ensure compliance with applicable regulations and anti-fraud measures.</p>
+      </div>
+    </div>
+
+    <!-- 10 -->
+    <div class="section">
+      <div class="section-header" onclick="toggleSection(this)">
+        <span class="section-num">10</span>
+        <span class="section-title">Suspension and Termination</span>
+        <svg class="chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 7.5l5 5 5-5"/></svg>
+      </div>
+      <div class="section-body">
+        <p>We reserve the right to suspend, restrict, or terminate any account that:</p>
+        <ul>
+          <li>Violates these Terms and Conditions;</li>
+          <li>Is involved in suspected fraudulent activities;</li>
+          <li>Provides inaccurate information; or</li>
+          <li>Misuses the platform in any way.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 11 -->
+    <div class="section">
+      <div class="section-header" onclick="toggleSection(this)">
+        <span class="section-num">11</span>
+        <span class="section-title">Limitation of Liability</span>
+        <svg class="chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 7.5l5 5 5-5"/></svg>
+      </div>
+      <div class="section-body">
+        <p>The platform shall not be liable for any indirect, incidental, special, or consequential damages arising from the use of the services. Users participate and transact through the platform at their own discretion and risk.</p>
+      </div>
+    </div>
+
+    <!-- 12 -->
+    <div class="section">
+      <div class="section-header" onclick="toggleSection(this)">
+        <span class="section-num">12</span>
+        <span class="section-title">Privacy</span>
+        <svg class="chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 7.5l5 5 5-5"/></svg>
+      </div>
+      <div class="section-body">
+        <p>User information collected through the platform shall be used in accordance with the applicable Privacy Policy and relevant data protection laws.</p>
+        <div class="callout">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 1.5L2 4.5v4c0 3.5 2.7 6 6 7 3.3-1 6-3.5 6-7v-4L8 1.5z"/></svg>
+          Your data is handled in accordance with our Privacy Policy and applicable data protection laws.
+        </div>
+      </div>
+    </div>
+
+    <!-- 13 -->
+    <div class="section">
+      <div class="section-header" onclick="toggleSection(this)">
+        <span class="section-num">13</span>
+        <span class="section-title">Changes to the Terms</span>
+        <svg class="chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 7.5l5 5 5-5"/></svg>
+      </div>
+      <div class="section-body">
+        <p>We reserve the right to amend these Terms and Conditions at any time. Updated versions will be published on the platform, and continued use of the services constitutes acceptance of the revised terms.</p>
+      </div>
+    </div>
+
+    <!-- 14 -->
+    <div class="section">
+      <div class="section-header" onclick="toggleSection(this)">
+        <span class="section-num">14</span>
+        <span class="section-title">Governing Law</span>
+        <svg class="chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 7.5l5 5 5-5"/></svg>
+      </div>
+      <div class="section-body">
+        <p>These Terms and Conditions shall be governed by and interpreted in accordance with the laws applicable in the jurisdiction in which the platform operates.</p>
+      </div>
+    </div>
+
+    <!-- 15 -->
+    <div class="section">
+      <div class="section-header" onclick="toggleSection(this)">
+        <span class="section-num">15</span>
+        <span class="section-title">Contact Information</span>
+        <svg class="chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 7.5l5 5 5-5"/></svg>
+      </div>
+      <div class="section-body">
+        <p>For questions, concerns, or assistance regarding these Terms and Conditions, users may contact the platform's official support channels.</p>
+      </div>
+    </div>
+
+    <!-- 16 -->
+    <div class="section">
+      <div class="section-header" onclick="toggleSection(this)">
+        <span class="section-num">16</span>
+        <span class="section-title">Agent Responsibilities</span>
+        <svg class="chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 7.5l5 5 5-5"/></svg>
+      </div>
+      <div class="section-body">
+        <div class="highlight-item">Agents are not permitted to undertake client tasks.</div>
+        <div class="highlight-item">Agents are expected to focus on their core responsibilities, including recruiting, guiding, and supporting clients.</div>
+        <div class="highlight-item">Engaging in client tasks may interfere with an agent's duties and may result in administrative action by the platform.</div>
+      </div>
+    </div>
+
+    <!-- 17 -->
+    <div class="section">
+      <div class="section-header" onclick="toggleSection(this)">
+        <span class="section-num">17</span>
+        <span class="section-title">Verification of Withdrawal Details</span>
+        <svg class="chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 7.5l5 5 5-5"/></svg>
+      </div>
+      <div class="section-body">
+        <p>For both agents and clients, withdrawals will only be processed when the documents and credentials submitted match the information used during account registration.</p>
+        <p>Any inconsistencies may lead to delays, additional verification requirements, or rejection of the withdrawal request.</p>
+      </div>
+    </div>
+
+    <!-- 18 -->
+    <div class="section">
+      <div class="section-header" onclick="toggleSection(this)">
+        <span class="section-num">18</span>
+        <span class="section-title">Client Qualification Requirements</span>
+        <svg class="chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 7.5l5 5 5-5"/></svg>
+      </div>
+      <div class="section-body">
+        <p>Agents must successfully recruit and maintain a minimum of <strong>25 active clients</strong> before their clients become eligible to receive tasks and related payments through the platform.</p>
+        <div class="callout callout-warn">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 2.5L1.5 13.5h13L8 2.5z"/><path d="M8 7v3M8 11.5v.5"/></svg>
+          A minimum of 25 active clients is required before task eligibility is unlocked.
+        </div>
+      </div>
+    </div>
+
+    <!-- 19 -->
+    <div class="section">
+      <div class="section-header" onclick="toggleSection(this)">
+        <span class="section-num">19</span>
+        <span class="section-title">Name Change Policy</span>
+        <svg class="chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 7.5l5 5 5-5"/></svg>
+      </div>
+      <div class="section-body">
+        <div class="highlight-item">Users may request a name change only once every 3 months.</div>
+        <div class="highlight-item">Clients may request a name change only after successfully completing 2 tasks.</div>
+        <div class="highlight-item">Agents may request a name change only once and only after attaining a minimum of 50 premium clients.</div>
+      </div>
+    </div>
+
+    <!-- 20 -->
+    <div class="section">
+      <div class="section-header" onclick="toggleSection(this)">
+        <span class="section-num">20</span>
+        <span class="section-title">Withdrawal Name Changes and Security</span>
+        <svg class="chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 7.5l5 5 5-5"/></svg>
+      </div>
+      <div class="section-body">
+        <p>All withdrawals and payments processed through the platform are subject to security and verification procedures to safeguard users and prevent fraud.</p>
+        <p>Any request to change withdrawal names or withdrawal details shall only take effect after a <strong>waiting period of 5 days</strong> from the date of the request and upon successful verification.</p>
+        <div class="callout">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="6"/><path d="M8 5v3.5l2.5 1.5"/></svg>
+          Name or detail changes on withdrawals take 5 days to process after verification.
+        </div>
+      </div>
+    </div>
+
+    <!-- 21 -->
+    <div class="section">
+      <div class="section-header" onclick="toggleSection(this)">
+        <span class="section-num">21</span>
+        <span class="section-title">Acknowledgement</span>
+        <svg class="chevron" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 7.5l5 5 5-5"/></svg>
+      </div>
+      <div class="section-body">
+        <p>By registering, accessing, and continuing to use this platform, you acknowledge that you have read, understood, and agreed to be bound by these Terms and Conditions. These provisions form a legally binding agreement between you and the platform.</p>
+      </div>
+    </div>
+
+    <br/>
+    <a class="back-top" href="#">
+      <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 13V3M3 8l5-5 5 5"/></svg>
+      Back to top
+    </a>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Business Hub. All rights reserved.</p>
+    <p style="margin-top:0.4rem;">Questions? <a href="#">Contact Support</a> · <a href="#">Privacy Policy</a></p>
+  </footer>
+
+  <script>
+    function toggleSection(header) {
+      const section = header.closest('.section');
+      section.classList.toggle('open');
+    }
+  </script>
+
+</body>
+</html>
