@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,8 +16,8 @@
       --text: #202124;
       --secondary: #5f6368;
       --border: #dadce0;
+      --link: #1a73e8;
       --background: #ffffff;
-      --soft: #f8f9fa;
     }
 
     * {
@@ -80,17 +81,56 @@
       margin: 42px 0 16px;
     }
 
+    h3 {
+      font-family: "Google Sans", Arial, sans-serif;
+      font-size: 18px;
+      font-weight: 500;
+      margin: 28px 0 12px;
+    }
+
     p {
       margin: 0 0 18px;
     }
 
-    ul {
+    ul,
+    ol {
       margin: 0 0 20px;
       padding-left: 24px;
     }
 
     li {
       margin-bottom: 8px;
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .legal-nav {
+      border-bottom: 1px solid var(--border);
+      padding: 14px 24px;
+    }
+
+    .legal-nav-inner {
+      max-width: 760px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      font-size: 14px;
+    }
+
+    .notice {
+      border-left: 3px solid var(--border);
+      padding: 14px 18px;
+      margin: 24px 0;
+      color: var(--secondary);
+      background: #fafafa;
     }
 
     footer {
@@ -104,23 +144,6 @@
 
     footer p {
       margin-bottom: 8px;
-    }
-
-    a {
-      color: var(--text);
-      text-decoration: underline;
-    }
-
-    a:hover {
-      color: #000000;
-    }
-
-    .notice {
-      background: var(--soft);
-      border-left: 3px solid #202124;
-      padding: 16px 18px;
-      margin: 24px 0;
-      font-size: 15px;
     }
 
     @media (max-width: 600px) {
@@ -144,6 +167,10 @@
       body {
         font-size: 15px;
       }
+
+      .legal-nav {
+        padding: 12px 20px;
+      }
     }
   </style>
 </head>
@@ -154,307 +181,546 @@
   <div class="brand">GWENO Hub</div>
 </header>
 
+<nav class="legal-nav">
+  <div class="legal-nav-inner">
+    <a href="https://swastaskhub.github.io/terms-/">Terms & Conditions</a>
+    <a href="https://swastaskhub.github.io/privacy/">Privacy Policy</a>
+    <a href="#">Conduct Policy</a>
+    <a href="mailto:businesshub.comke@gmail.com">Support</a>
+  </div>
+</nav>
+
 <main>
 
-  <h1>Terms &amp; Conditions</h1>
+  <h1>Terms & Conditions</h1>
 
   <p class="updated">Last updated: June 19, 2026</p>
 
   <p>
     Welcome to GWENO Hub. These Terms and Conditions govern your access to
-    and use of the GWENO Hub platform, including its website, accounts,
-    tasks, earning features, payment-related services, support services,
-    and other services made available through the platform.
+    and use of GWENO Hub, including its website, user accounts, task
+    marketplace, earning features, payment and withdrawal services, support
+    services, communications, and other features made available through the
+    platform.
   </p>
 
   <p>
-    By creating an account, accessing the platform, or continuing to use
-    GWENO Hub, you confirm that you have read, understood, and agreed to
-    these Terms and Conditions. If you do not agree with these Terms, you
-    should not register for or use the platform.
+    By creating an account, accessing the website, accepting tasks, submitting
+    work, using platform services, or otherwise continuing to use GWENO Hub,
+    you acknowledge that you have read, understood, and agreed to these Terms
+    and Conditions. If you do not agree with these Terms, you should not
+    register for, access, or use the platform.
+  </p>
+
+  <p>
+    These Terms apply to users regardless of the country from which they access
+    GWENO Hub. Certain provisions may operate differently where mandatory laws
+    in a user's jurisdiction provide additional rights or protections.
   </p>
 
   <h2>1. Acceptance of Terms</h2>
 
   <p>
-    By using GWENO Hub, you enter into an agreement with the platform and
-    agree to comply with these Terms, applicable policies, platform rules,
-    and instructions communicated through official GWENO Hub channels.
+    Your use of GWENO Hub constitutes acceptance of these Terms and any
+    applicable policies or rules made available through the platform. These
+    Terms form the basis on which GWENO Hub provides its services to users.
   </p>
 
   <p>
-    These Terms apply to all users, including task workers, clients, agents,
-    and other persons who access or use the platform.
+    We may update these Terms from time to time to reflect changes to our
+    services, security requirements, operational procedures, legal obligations,
+    or platform features. Updated Terms may be published on this page. The
+    revised date will be displayed at the top of the document.
   </p>
 
   <p>
-    GWENO Hub may update these Terms from time to time. Updated Terms may
-    be published through the platform. Continued use of GWENO Hub after
-    an update becomes effective means that you accept the revised Terms.
+    Where permitted by applicable law, continued use of GWENO Hub after an
+    updated version becomes effective constitutes acceptance of the revised
+    Terms.
   </p>
 
-  <h2>2. Eligibility and Account Registration</h2>
+  <h2>2. Eligibility</h2>
 
   <p>
-    You must have the legal capacity required to enter into an agreement
-    in the jurisdiction where you live or use the platform.
-  </p>
-
-  <p>
-    When creating an account, you must provide accurate, complete, and
-    truthful information. You must not create an account using another
-    person's identity or information without authorization.
+    You must have the legal capacity required by the laws applicable to you to
+    create and use an account with GWENO Hub.
   </p>
 
   <p>
-    You are responsible for keeping your login credentials secure. You
-    should immediately report suspected unauthorized access through
-    official GWENO Hub support channels.
-  </p>
-
-  <h2>3. Use of the Platform</h2>
-
-  <p>
-    GWENO Hub provides an online platform through which eligible users may
-    access tasks and other available services. Availability of tasks,
-    features, earning opportunities, and services may vary according to
-    account status, platform operations, location, demand, and other
-    factors.
+    Unless otherwise expressly permitted by GWENO Hub and applicable law, the
+    platform is intended for individuals who are at least 18 years old.
+    Individuals who do not meet the applicable age or legal-capacity
+    requirements must not create or operate an account.
   </p>
 
   <p>
-    Users must follow the instructions provided for each task. Submissions
-    may be reviewed or verified before earnings are credited.
+    You are responsible for ensuring that your use of GWENO Hub is lawful in
+    the country or territory from which you access the platform.
+  </p>
+
+  <h2>3. Account Registration</h2>
+
+  <p>
+    When creating an account, you must provide information that is accurate,
+    complete, current, and capable of being verified where verification is
+    required.
   </p>
 
   <p>
-    GWENO Hub does not guarantee that a particular task, earning amount,
-    number of tasks, or earning opportunity will always be available.
-  </p>
-
-  <h2>4. Task Participation</h2>
-
-  <p>
-    Users must complete tasks honestly, accurately, and according to the
-    instructions provided. Users must not submit copied, fraudulent,
-    manipulated, incomplete, or intentionally misleading work.
+    Account information may include your name, email address, telephone number,
+    identification information, payment information, and other information
+    required for account operation or verification.
   </p>
 
   <p>
-    Only one task may be undertaken at a time where the platform requires
-    sequential task completion. Task availability and participation limits
-    may vary depending on account status and platform requirements.
+    You must not register using another person's identity, impersonate another
+    person, create an account using deliberately false information, or provide
+    information belonging to another individual without authorization.
   </p>
 
   <p>
-    GWENO Hub may reject task submissions that do not meet the applicable
-    requirements. Repeated submission of unacceptable work may result in
-    restrictions on task access.
+    You are responsible for maintaining the confidentiality of your login
+    credentials. You should immediately report suspected unauthorized access,
+    account compromise, or suspicious activity through official support
+    channels.
   </p>
 
-  <h2>5. Earnings and Withdrawals</h2>
+  <h2>4. Account Security</h2>
 
   <p>
-    Earnings may be credited to your GWENO Hub account after successful
-    completion and verification of eligible tasks.
-  </p>
-
-  <p>
-    The appearance of an amount in an account does not necessarily mean
-    that the amount is immediately available for withdrawal. Applicable
-    verification, processing, account, or withdrawal requirements may
-    apply.
+    You are responsible for reasonable steps to protect your account,
+    including keeping passwords and authentication information confidential.
+    You should not share passwords, PINs, one-time verification codes, or
+    other security credentials with another person.
   </p>
 
   <p>
-    Users must use the official withdrawal process provided by GWENO Hub.
-    Users are responsible for ensuring that their account and payment
-    information is accurate.
+    GWENO Hub staff will not request passwords, PINs, OTP codes, or other
+    sensitive authentication credentials through unofficial communication
+    channels.
   </p>
 
   <p>
-    Incorrect, incomplete, inconsistent, or unverified information may
-    cause a withdrawal to be delayed, rejected, cancelled, or subjected
-    to additional verification.
+    If you believe your account has been compromised, contact the support team
+    promptly through the official support options listed on this website.
   </p>
 
-  <h2>6. Fees and Account Services</h2>
+  <h2>5. Task Participation</h2>
 
   <p>
-    Certain services may require activation, administrative, processing,
-    premium, withdrawal, account-update, or other applicable fees.
-    Applicable charges will be displayed or communicated through official
-    GWENO Hub services before the relevant transaction is completed.
-  </p>
-
-  <p>
-    Users are responsible for reviewing applicable fees before confirming
-    a transaction.
-  </p>
-
-  <h2>7. Name and Profile Changes</h2>
-
-  <p>
-    Important account information may be subject to restrictions designed
-    to protect account security and maintain accurate records.
+    GWENO Hub may make tasks available to eligible users depending on task
+    availability, account status, platform requirements, location,
+    subscription level, verification status, and other operational factors.
   </p>
 
   <p>
-    A name change may be requested only once every one month unless GWENO
-    Hub determines that an exception is appropriate for verification,
-    security, legal, or administrative reasons.
+    Before accepting a task, you are responsible for reading and understanding
+    the instructions provided with that task.
   </p>
 
   <p>
-    If a user begins the name-change process and the applicable process is
-    initiated, the request may be treated as having been used even where
-    the user fails to complete the final submission.
+    Task submissions must be genuine and must represent work actually completed
+    by the account holder. You must not intentionally submit copied, fabricated,
+    incomplete, manipulated, or misleading work.
   </p>
 
   <p>
-    Users should carefully confirm their information before submitting an
-    account-change request.
+    Tasks may be reviewed before earnings are credited. GWENO Hub may reject a
+    submission where the work does not meet the applicable task requirements.
   </p>
 
-  <h2>8. Phone Numbers and Account Security</h2>
+  <p>
+    Task availability is not guaranteed. The number, type, value, and timing of
+    available tasks may change according to platform operations.
+  </p>
+
+  <h2>6. Honest Use of the Platform</h2>
 
   <p>
-    Phone numbers provided during registration are securely stored within
+    Users must use GWENO Hub honestly and must not attempt to obtain earnings,
+    account benefits, referrals, task allocations, or other advantages through
+    deception or manipulation.
+  </p>
+
+  <p>Prohibited conduct includes:</p>
+
+  <ul>
+    <li>Submitting fraudulent or deliberately misleading information.</li>
+    <li>Using another person's account without authorization.</li>
+    <li>Attempting to manipulate task results or payment records.</li>
+    <li>Using automated methods to interfere with platform operations without authorization.</li>
+    <li>Attempting to bypass security, verification, access, or account restrictions.</li>
+    <li>Interfering with the normal operation of the website or services.</li>
+    <li>Using the platform for unlawful purposes.</li>
+  </ul>
+
+  <h2>7. Earnings</h2>
+
+  <p>
+    Eligible earnings may be credited to your GWENO Hub account after the
+    applicable task has been completed and accepted.
+  </p>
+
+  <p>
+    The amount associated with a task will be communicated through the
+    platform. Task values may vary depending on the task, category,
+    requirements, and applicable account conditions.
+  </p>
+
+  <p>
+    Displayed earnings are not necessarily immediately available for
+    withdrawal. GWENO Hub may require completion of verification or other
+    applicable procedures before funds become available.
+  </p>
+
+  <h2>8. Withdrawals</h2>
+
+  <p>
+    Users must initiate withdrawals through the official withdrawal process
+    available through GWENO Hub.
+  </p>
+
+  <p>
+    You are responsible for ensuring that your account and withdrawal details
+    are accurate. Incorrect, incomplete, inconsistent, or unverifiable
+    information may result in a delay, rejection, cancellation, or additional
+    verification.
+  </p>
+
+  <p>
+    Processing times may vary depending on the payment method, verification
+    requirements, operational circumstances, weekends, holidays, financial
+    institutions, payment providers, and other factors outside the platform's
+    immediate control.
+  </p>
+
+  <p>
+    GWENO Hub does not guarantee that every withdrawal will be completed within
+    a particular period unless a specific processing commitment has expressly
+    been provided for that transaction.
+  </p>
+
+  <h2>9. Fees and Account Services</h2>
+
+  <p>
+    Certain GWENO Hub services may involve activation, account, processing,
+    withdrawal, premium, administrative, or profile-update charges.
+    Applicable charges will be communicated through the platform before the
+    relevant transaction is completed.
+  </p>
+
+  <p>
+    The current fee for a name update is <strong>KES 480 (Four Hundred and
+    Eighty Kenyan Shillings)</strong>, unless GWENO Hub publishes a revised
+    fee.
+  </p>
+
+  <p>
+    Users should carefully review the transaction details before confirming a
+    payment or service request.
+  </p>
+
+  <h2>10. Name Change Policy</h2>
+
+  <p>
+    A user may request a name change only once every one month, subject to the
+    applicable verification and account requirements.
+  </p>
+
+  <p>
+    The restriction is intended to protect account integrity, reduce
+    unauthorized changes, and maintain accurate account records.
+  </p>
+
+  <p>
+    If a user starts the name-change process and proceeds with the applicable
+    service, the request may be treated as having been initiated even where the
+    user does not successfully complete the final submission.
+  </p>
+
+  <p>
+    Users should therefore verify the spelling and accuracy of the intended
+    name before starting a name-update request.
+  </p>
+
+  <h2>11. Telephone Numbers and Account Information</h2>
+
+  <p>
+    Telephone numbers provided during registration are securely stored within
     the GWENO Hub system and associated with the relevant account.
   </p>
 
   <p>
-    GWENO Hub staff will not ask users to send their registered phone
-    number through unofficial communication channels for account
-    maintenance, verification, or technical repairs.
+    GWENO Hub personnel will not ask users to send their registered telephone
+    number through unofficial WhatsApp conversations, direct messages, calls,
+    or other unofficial channels for routine account maintenance.
   </p>
 
   <p>
-    GWENO Hub staff will also not request passwords, PINs, OTP codes,
-    login credentials, or other sensitive security credentials through
+    Users should never disclose passwords, PINs, OTP codes, or other security
+    credentials to individuals claiming to represent GWENO Hub through
     unofficial channels.
   </p>
 
-  <h2>9. Prohibited Activities</h2>
+  <h2>12. Communications and Support</h2>
 
   <p>
-    Users must not use GWENO Hub for unlawful, fraudulent, abusive, or
-    harmful purposes.
-  </p>
-
-  <ul>
-    <li>Identity theft or impersonation;</li>
-    <li>Unauthorized use of another person's account;</li>
-    <li>Providing false or misleading information;</li>
-    <li>Manipulating tasks, earnings, or platform processes;</li>
-    <li>Attempting to bypass security or verification systems;</li>
-    <li>Interfering with platform operations or systems;</li>
-    <li>Using automated methods where they are not authorized;</li>
-    <li>Attempting unauthorized access to accounts or systems; and</li>
-    <li>Harassing, threatening, or abusing staff or other users.</li>
-  </ul>
-
-  <h2>10. Verification and Compliance</h2>
-
-  <p>
-    GWENO Hub may conduct reasonable verification and security checks to
-    protect accounts, users, payments, and platform operations.
+    GWENO Hub may communicate with users regarding account activity, task
+    availability, platform updates, verification, withdrawals, security, and
+    important service information.
   </p>
 
   <p>
-    Where necessary, users may be asked to provide information or
-    documentation through official channels to confirm account ownership,
-    investigate suspicious activity, or satisfy applicable requirements.
-  </p>
-
-  <h2>11. Suspension and Termination</h2>
-
-  <p>
-    GWENO Hub may suspend, restrict, investigate, or terminate an account
-    where there is reasonable evidence of fraud, misuse, security concerns,
-    false information, violation of these Terms, or conduct that may harm
-    the platform or other users.
+    Users may contact support through the official channels provided by GWENO
+    Hub.
   </p>
 
   <p>
-    Depending on the circumstances, restrictions may affect task access,
-    account features, communications, or withdrawals while a matter is
-    reviewed.
+    Email support:
+    <a href="mailto:businesshub.comke@gmail.com">
+      businesshub.comke@gmail.com
+    </a>
   </p>
-
-  <h2>12. Privacy</h2>
 
   <p>
-    GWENO Hub handles personal information according to its Privacy Policy
-    and applicable requirements. Information may be processed where
-    reasonably necessary to operate the platform, provide services,
-    maintain security, prevent fraud, process transactions, provide
-    support, and meet applicable obligations.
+    WhatsApp support:
+    <a href="https://wa.me/254765772203"
+       target="_blank"
+       rel="noopener noreferrer">
+      Contact GWENO Hub Support on WhatsApp
+    </a>
   </p>
 
-  <h2>13. Platform Availability</h2>
+  <h2>13. Customer Conduct</h2>
 
   <p>
-    GWENO Hub works to maintain reliable platform availability but does
-    not guarantee uninterrupted or error-free operation. Services may
-    occasionally be unavailable because of maintenance, technical
-    problems, security measures, network interruptions, third-party
-    services, or circumstances outside the platform's reasonable control.
+    Users must communicate respectfully with customer care representatives and
+    other GWENO Hub personnel. Threats, harassment, intimidation, abusive
+    communication, deliberate disruption, and repeated unreasonable contact
+    are prohibited.
   </p>
 
-  <h2>14. Limitation of Liability</h2>
+  <p>
+    Further information is available in the
+    <a href="https://swastaskhub.github.io/conduct/">
+      Customer Conduct & Suspension Policy
+    </a>.
+  </p>
+
+  <h2>14. Verification and Compliance</h2>
+
+  <p>
+    GWENO Hub may conduct account, identity, transaction, task, security, and
+    fraud-prevention checks where reasonably necessary.
+  </p>
+
+  <p>
+    Users may be asked to provide information or documentation through official
+    channels where necessary to confirm account ownership, investigate
+    suspicious activity, protect platform security, or comply with applicable
+    requirements.
+  </p>
+
+  <p>
+    Failure to complete a legitimate verification process may result in
+    temporary restrictions on certain account services.
+  </p>
+
+  <h2>15. Fraud, Abuse and Computer Misuse</h2>
+
+  <p>
+    You must not access, interfere with, damage, disrupt, manipulate, or
+    attempt to gain unauthorized access to GWENO Hub systems, accounts,
+    databases, communications, payment processes, or security mechanisms.
+  </p>
+
+  <p>
+    You must not introduce malicious software, attempt unauthorized testing,
+    exploit vulnerabilities without authorization, intercept communications,
+    manipulate data, or interfere with the availability or integrity of the
+    platform.
+  </p>
+
+  <p>
+    Conduct involving fraud, unauthorized access, identity misuse, computer
+    misuse, payment manipulation, or other unlawful activity may result in
+    account restrictions and may be reported to appropriate authorities where
+    required or permitted.
+  </p>
+
+  <h2>16. Intellectual Property</h2>
+
+  <p>
+    Unless otherwise stated, the GWENO Hub name, branding, website design,
+    software, text, graphics, interfaces, logos, and other platform materials
+    are protected by applicable intellectual-property rights.
+  </p>
+
+  <p>
+    You may not copy, reproduce, distribute, modify, sell, reverse engineer,
+    or commercially exploit platform materials without appropriate
+    authorization.
+  </p>
+
+  <h2>17. Third-Party Services</h2>
+
+  <p>
+    GWENO Hub may use third-party providers for payment processing,
+    communications, hosting, authentication, analytics, infrastructure, or
+    other operational functions.
+  </p>
+
+  <p>
+    Third-party services may be subject to their own terms, privacy practices,
+    and technical requirements.
+  </p>
+
+  <h2>18. Suspension and Termination</h2>
+
+  <p>
+    GWENO Hub may restrict, suspend, investigate, or terminate an account where
+    there is reasonable evidence of fraud, misuse, security concerns,
+    prohibited conduct, false information, unauthorized activity, or a
+    violation of these Terms.
+  </p>
+
+  <p>
+    Depending on the circumstances, an account may be temporarily restricted
+    while an investigation or verification process is conducted.
+  </p>
+
+  <p>
+    Users may contact support regarding an account restriction through the
+    official support channels.
+  </p>
+
+  <h2>19. Availability of the Platform</h2>
+
+  <p>
+    GWENO Hub aims to maintain reliable services but does not guarantee that
+    the website or every feature will always be available without interruption.
+  </p>
+
+  <p>
+    Services may be temporarily unavailable because of maintenance, technical
+    problems, security measures, infrastructure failures, third-party
+    interruptions, network issues, or circumstances beyond reasonable control.
+  </p>
+
+  <h2>20. Privacy</h2>
+
+  <p>
+    Information collected through GWENO Hub is handled in accordance with the
+    platform's Privacy Policy and applicable requirements.
+  </p>
+
+  <p>
+    Please review the
+    <a href="https://swastaskhub.github.io/privacy/">
+      GWENO Hub Privacy Policy
+    </a>
+    for information about the collection, use, protection, retention, and
+    handling of personal information.
+  </p>
+
+  <h2>21. Limitation of Liability</h2>
 
   <p>
     To the extent permitted by applicable law, GWENO Hub will not be
-    responsible for indirect, incidental, special, or consequential losses
-    arising from use of or inability to use the platform.
+    responsible for indirect, incidental, special, consequential, or similar
+    losses arising from use of or inability to use the platform.
   </p>
 
   <p>
-    Nothing in these Terms excludes or limits rights or responsibilities
-    that cannot lawfully be excluded or limited.
+    Nothing in these Terms is intended to exclude or restrict liability that
+    cannot lawfully be excluded or restricted under applicable law.
   </p>
 
-  <h2>15. Governing Requirements</h2>
+  <h2>22. Applicable Requirements</h2>
 
   <p>
-    These Terms are intended to operate in accordance with applicable
-    legal requirements. Where mandatory rules apply to a user or a
-    particular service, those requirements will apply to the extent
-    required.
-  </p>
-
-  <h2>16. Contact and Acknowledgement</h2>
-
-  <p>
-    If you have questions or concerns regarding these Terms, you should
-    contact GWENO Hub through its official support channels.
+    GWENO Hub operates across jurisdictions and users may be subject to
+    different mandatory legal requirements depending on their location and
+    activity.
   </p>
 
   <p>
-    By registering, accessing, or continuing to use GWENO Hub, you
-    acknowledge that you have read, understood, and agreed to these Terms
-    and Conditions.
+    Users are responsible for complying with applicable laws and regulations
+    governing their use of online services, payments, communications,
+    intellectual property, personal information, and computer systems.
+  </p>
+
+  <h2>23. Changes to Services</h2>
+
+  <p>
+    GWENO Hub may introduce, modify, suspend, or discontinue features when
+    reasonably necessary for operational, security, technical, commercial, or
+    legal reasons.
+  </p>
+
+  <p>
+    Where a change materially affects users, information may be provided
+    through the platform or another appropriate communication channel.
+  </p>
+
+  <h2>24. Contact and Acceptance</h2>
+
+  <p>
+    If you have questions about these Terms, contact GWENO Hub through the
+    official support channels.
+  </p>
+
+  <p>
+    Email:
+    <a href="mailto:businesshub.comke@gmail.com">
+      businesshub.comke@gmail.com
+    </a>
+  </p>
+
+  <p>
+    WhatsApp:
+    <a href="https://wa.me/254765772203"
+       target="_blank"
+       rel="noopener noreferrer">
+      GWENO Hub WhatsApp Support
+    </a>
+  </p>
+
+  <p>
+    By creating an account, accessing the platform, accepting tasks, or
+    continuing to use GWENO Hub, you acknowledge that you have read,
+    understood, and agreed to these Terms and Conditions.
   </p>
 
 </main>
 
 <footer>
   <p>© 2026 GWENO Hub. All rights reserved.</p>
+
   <p>
-    Questions?
-    <a href="mailto:businesshub.coke@gmail.com">
-      businesshub.comke@gmail.com
+    <a href="https://swastaskhub.github.io/terms-/">
+      Terms & Conditions
+    </a>
+    &nbsp;·&nbsp;
+
+    <a href="https://swastaskhub.github.io/privacy/">
+      Privacy Policy
+    </a>
+    &nbsp;·&nbsp;
+
+    <a href="https://swastaskhub.github.io/conduct/">
+      Conduct Policy
     </a>
   </p>
+
   <p>
-    <a href="https://swastaskhub.github.io/privacy/"
-       target="_blank"
-       rel="noopener noreferrer">
-      Privacy Policy
+    Support:
+    <a href="mailto:businesshub.comke@gmail.com">
+      businesshub.comke@gmail.com
     </a>
   </p>
 </footer>
 
 </body>
 </html>
+```
